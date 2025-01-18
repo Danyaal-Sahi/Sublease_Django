@@ -1,0 +1,28 @@
+.home-container {
+    /* Background settings */
+    background-image: url('Backg.jpeg');
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    height: 100vh;                
+    width: 100%;           
+    z-index: -1;        
+}
+
+
+p {
+    color: turquoise;
+}
+.navbar {
+    height: 60px;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.05); /* Slight white background with 20% opacity */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(1px); /* Optional: adds a slight blur effect to content behind the navbar */
+    z-index: 1;
+}
+
+
+.nav-item {
+    color: turquoise;
+}
