@@ -4,3 +4,6 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html', {'title': 'Welcome to My Page'})
 # Create your views here.
+
+def browse(request):
+    return render(request, 'browse.html',{} )

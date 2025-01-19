@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,6 +24,11 @@ SECRET_KEY = "django-insecure-0ii&t9pg*49c07i+w&*yt62nq_pli+%w&8f7piwh!!pyw_==#9
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+
+
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH', '/opt/homebrew/lib/libgdal.dylib.bak')
+GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
 
 ALLOWED_HOSTS = []
 
@@ -78,7 +83,7 @@ WSGI_APPLICATION = "sublease_project.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'sublease',
         'USER': 'admin',
         'PASSWORD': 'password',
