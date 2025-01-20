@@ -1,1 +1,9 @@
-#map { height: 180px; }
+
+
+#map {
+    height: 650px; /* Fixed height for the map */
+    width: 50%; /* Full width of the container */
+    margin-top: 20px; /* Space above the map */
+    margin-bottom: 25px;
+  }
+  
